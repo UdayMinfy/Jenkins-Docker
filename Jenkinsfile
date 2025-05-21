@@ -9,8 +9,14 @@ pipeline {
         DOCKER_IMAGE = 'udayminfy/python-unittest-app'
         DOCKER_TAG = 'latest'
     }
+    
 
-    stages {
+    stages { 
+         stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
         stage ("Install") {
             steps {
                 sh '''
