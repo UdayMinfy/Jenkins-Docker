@@ -1,9 +1,6 @@
 
 pipeline {
-    agent any {
-       
-    }
-
+    agent any 
     environment {
         VENV = 'venv'
         DOCKER_IMAGE = 'udayminfy/python-unittest-app'
